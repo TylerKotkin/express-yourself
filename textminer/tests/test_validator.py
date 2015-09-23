@@ -4,7 +4,7 @@ xfail = pytest.mark.xfail
 import textminer.validator as v
 
 
-@xfail
+
 def test_binary_numbers():
     assert v.binary("0")
     assert v.binary("1")
@@ -15,7 +15,7 @@ def test_binary_numbers():
     assert not v.binary("911")
 
 
-@xfail
+
 def test_binary_even():
     """String must be a binary number and be even."""
 
@@ -24,7 +24,7 @@ def test_binary_even():
     assert not v.binary_even("1011")
 
 
-@xfail
+
 def test_hexadecimal():
     assert v.hex("CAFE")
     assert v.hex("9F9")
@@ -34,7 +34,7 @@ def test_hexadecimal():
     assert not v.hex("COFFEE")
 
 
-@xfail
+
 def test_word():
     assert v.word("hello")
     assert v.word("wonderful")
