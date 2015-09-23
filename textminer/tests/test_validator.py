@@ -47,7 +47,7 @@ def test_word():
     assert not v.word("bar*us")
 
 
-@xfail
+
 def test_words():
     """words can take an optional count argument. In case it exists, the text
     must match that number of words."""
@@ -69,7 +69,7 @@ def test_words():
     assert not v.words("18-wheeler tarbox", count=3)
 
 
-@xfail
+
 def test_phone_numbers():
     """US phone numbers only."""
 
@@ -84,7 +84,7 @@ def test_phone_numbers():
     assert not v.phone_number("mobile")
 
 
-@xfail
+
 def test_money():
     """We are just concerned with dollars here."""
 
@@ -110,7 +110,7 @@ def test_money():
     assert not v.money("$$31")
 
 
-@xfail
+
 def test_zip():
     assert v.zipcode("63936")
     assert v.zipcode("50583")
@@ -125,7 +125,7 @@ def test_zip():
     assert not v.zipcode("8029-3924")
 
 
-@xfail
+
 def test_date():
     assert v.date("9/4/1976")
     assert v.date("1976-09-04")
